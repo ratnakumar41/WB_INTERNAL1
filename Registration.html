@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>
+            22135A1206
+        </title>
+        <style>
+            body
+            {
+                font-family: cursive;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" name="myform" onsubmit="myfun()">
+            <fieldset style="margin-top: 5%;">
+                <legend align="center"><h1>REGISTRATION</h1></legend>
+                <label for="">NAME <input type="text" name="name" id="name" pattern="[A-Z][A-Za-z]{2,}" title="first must be in capital"></label> <br> <br>
+                <label for="">MAIL</label>
+                <input type="text" name="mail" id="mail" pattern="[a-z\d\\.a-z]+@(gmail\.com|co\.in|gvpce\.ac\.in)" title="In email Format"> <br> <br>
+                <label for="">MOBILE </label>
+                <input type="text" name="mobile" id="mobile" pattern="9\d{9}" title="num must 9 start 10 diGITS"> <br> <br>
+                <label for="">GENDER</label>
+                <input type="radio" name="gender" id="male" value="male">MALE
+                <input type="radio" name="gender" id="female" value="female">FEMALE <br> <br>
+                <label for="">  HOBBIES : </label>
+                <select name="" id="hobby">
+                    <option value="">Select an option</option>
+                    <option value="Reading">READING</option>
+                    <option value="Writing">WRITING</option>
+                    <option value="Sleeping">SLEEPING</option>
+                </select> <br> <br>
+                <input type="submit" name="" id="log" value="SUBMIT">
+            </fieldset>
+        </form>
+        <script>
+            function myfun()
+            {
+                var a=document.getElementById("name").value;
+                var b=document.getElementById("mail").value;
+                var c=document.getElementById("mobile").value;
+                // var d=document.getElementById("hobby").value;
+                var z;
+                z=document.getElementById("hobby").value;
+                if(z=="")
+                {
+                    alert("Atleast one dropdown to be selected");
+                    return false;
+                }
+                console.log(z);
+                var g;
+                if(document.getElementById("male").checked==true)
+                {
+                    g=document.getElementById("male").value;
+                }
+                else if(document.getElementById("female").checked==true)
+                {
+                    g=document.getElementById("female").value;
+                }
+                else{
+                    alert("Gender select karo");
+                }
+                if(a=="" || b=="" || c=="")
+                {
+                    if(a=="")
+                    {
+                        alert("name can't be empty");
+                    }
+                    if(b=="")
+                    {
+                        alert("mail can't be empty");
+                    }
+                    if(c=="")
+                    {
+                        alert("mobile can't be empty");
+                    }
+                }
+                else{
+                    alert("name is: "+a+"\nmail is: "+b+"\n mobile number is: "+c+"\ngender is: "+g+"\nhobby is: "+z);
+                }
+            // var name=document.getElementById("name").value;
+            // var format=/^[A-Z][A-Za-z]{2,}$/;
+            // if(!format.test(name))
+            // {
+            //     alert("name shall be in format");
+            //     return false;
+            // }
+            }
+        </script>
+    </body>
+</html>

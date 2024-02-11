@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <form action="" style="margin-top: 10%;">
+        <input type="radio" oninput="myfun()" id="red" name="1">RED &nbsp;
+        <input type="radio" onclick="myfun()" id="green" name="1">GREEN &nbsp;
+        <input type="radio" onclick="myfun()" id="blue" name="1">BLUE &nbsp;
+    </form>
+    <script>
+        function myfun()
+        {
+            if(document.getElementById("red").checked==true)
+            {
+                document.body.style.backgroundColor="red";
+            }
+            if(document.getElementById("green").checked==true)
+            {
+                document.body.style.backgroundColor="green";
+            }
+            if(document.getElementById("blue").checked==true)
+            {
+                document.body.style.backgroundColor="blue";
+            }
+        }
+    </script>
+</body>
+</html>

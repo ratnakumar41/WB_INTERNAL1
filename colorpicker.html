@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body align="center">
+    <form  style="margin-top: 10%;">
+        <label for="">BACKGROUND</label>
+        <input type="color" id="bg" oninput="myfun()"> <br> <br>
+        <label for="">FOREGROUND</label>
+        <input type="color" id="fg" oninput="myfun()">
+        <p id="p">
+            Hello I am from india.
+        </p>
+    </form>
+    <script>
+        function myfun()
+        {
+            var a=document.getElementById("bg").value;
+            var b=document.getElementById("fg").value;
+            document.body.style.backgroundColor=a;
+            document.getElementById("p").style.color=b;
+        }
+    </script>
+</body>
+</html>
